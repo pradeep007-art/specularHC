@@ -18,6 +18,10 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('Hello, the server is working!');
+});
+
 // 📮 POST endpoint
 app.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
